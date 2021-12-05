@@ -36,7 +36,7 @@ def filter_words(words, dictionary):
 def main(args):
     dictionary = load_dict(args.dict_file)
     guesses = mk_guesses(args.letters, args.min_len)
-    for word in filter_words(guesses, dictionary):
+    for word in sorted(filter_words(guesses, dictionary)):
         print(word)
 
 
